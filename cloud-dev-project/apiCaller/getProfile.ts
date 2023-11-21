@@ -3,7 +3,7 @@ import axios, { AxiosRequestConfig } from 'axios'
 export default async function getProfile(){
     
         const url = process.env.NEXT_PUBLIC_API_URL+`/api/user/get-profile`
-        const authToken = await fetch('http://localhost/api/auth');
+        const authToken = await fetch('/api/auth');
         const token = await authToken.json();
         const Bearertoken = 'Bearer '+token.value;
 
