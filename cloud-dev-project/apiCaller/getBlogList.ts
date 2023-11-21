@@ -7,6 +7,7 @@ export default async function getBlogList(sort: string, limit: number){
         const authToken = await fetch('/api/auth');
         const token = await authToken.json();
         const Bearertoken = 'Bearer '+token.value;
+        console.log(Bearertoken)
 
         const config: AxiosRequestConfig = {
             method: 'get',
